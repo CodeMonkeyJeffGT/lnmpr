@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function cleanpkg ()
 {
     if [ -d $1/ ] ; then
