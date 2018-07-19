@@ -1,8 +1,13 @@
 #!/bin/bash
 
 cd `dirname $0`
-cd ../../nginx
 
+../shell/checkinstalled nginx
+if [ -d ../data/nginx ] ; then
+    exit 1
+fi
+
+cd ../../nginx
 echo 进入`pwd`
 echo 安装\ nginx
 

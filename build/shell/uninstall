@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd `dirname $0`
+
+loc=`cat ../data/$1`
+rm ../data/$1
+sudo rm -rf $loc
