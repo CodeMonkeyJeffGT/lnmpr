@@ -1,0 +1,44 @@
+#!/bin/bash
+
+cd `dirname $0`
+
+echo 进入`pwd`
+echo -n 请指定安装路径，默认为\ /env：
+read base
+function pkgExist ()
+{
+    if [ ! -d $1/ ] ; then
+        build/shell/unpack $1
+    fi
+}
+
+function checkInstall ()
+{
+    if [ ! -d $1/$2 ] ; then
+        exit 1
+    fi
+}
+
+# 检查环境
+pkgExist nginx
+pkgExist php
+pkgExist redis
+pkgExist phpredis
+
+echo 开始安装
+
+if [ ! $base ] ; then
+    base=/env
+fi
+sudo mkdir -p $base
+
+build/install/nginx $base/nginx
+checkInstall $base nginx
+build/install/php $base/php
+checkInstall $base php
+build/install/redis $base/redis
+checkInstall $base redis
+build/install/phpredis $base/php
+
+echo 安装完成
+build/shell/cleanpkg

@@ -9,10 +9,10 @@ Linux：CentOS，请保证 yum 可用
 *   phpredis 拓展
 
 ### 安装步骤：
-*   执行 ./install.sh 安装全部 4 个应用
+*   执行 ./install 安装全部 4 个应用
 
-您也可自行下载新版本解包，解压并放在当前目录下 nginx php redis phpredis
+您也可自行下载新版本解包，解压并放在当前目录下 nginx/ php/ redis/ phpredis/
 
-也可以在 build/ 目录单独安装您需要的单个应用
+也可以在 build/install/ 目录单独安装您需要的单个应用
 
 有可能会出现安装错误的情况，届时请自行修改安装脚本或手动安装

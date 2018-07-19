@@ -1,0 +1,17 @@
+#!/bin/bash
+
+cd `dirname $0`
+cd ../../
+
+pkgnginx=nginx-1.14.0
+pkgphp=php-7.2.7
+pkgredis=redis-4.0.10
+pkgphpredis=phpredis
+
+tarName=`eval echo '$pkg'$1`
+
+echo 解压\ `pwd`/build/pkgs/$tarName.tar.gz\ 至\ `pwd`/$1/
+tar -zxf `pwd`/build/pkgs/$tarName.tar.gz
+if [ $tarName != $1 ]; then
+    mv `pwd`/$tarName/ `pwd`/$1/
+fi

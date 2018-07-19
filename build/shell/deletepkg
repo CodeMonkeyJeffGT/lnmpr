@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd `dirname $0`
+cd ../../
+
+loc=`pwd`/$1/
+
+if [ -d $loc ] ; then
+    echo 删除\ $loc
+    rm -rf $loc
+fi

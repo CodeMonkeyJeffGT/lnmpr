@@ -1,0 +1,24 @@
+#!/bin/bash
+
+cd `dirname $0`
+cd ../../nginx
+
+echo 进入`pwd`
+echo 安装\ nginx
+
+if [ $1 ] ; then
+    loc=$1
+else
+    echo -n 请输入安装路径，默认为\ /env/nginx/：
+    read loc
+    if [ ! $loc ] ; then
+        loc=/env/nginx/
+    fi
+fi
+
+# yum -y install openssl-devel
+# ./configure --prefix=$loc --with-http_stub_status_module --with-http_ssl_module
+# make
+# make install
+
+../build/shell/checkandsave $loc nginx

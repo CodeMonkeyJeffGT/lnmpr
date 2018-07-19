@@ -1,0 +1,19 @@
+#!/bin/bash
+
+cd `dirname $0`
+cd ../../php
+
+echo 进入`pwd`
+echo 安装\ php
+
+if [ $1 ] ; then
+    loc=$1
+else
+    echo -n 请输入安装路径，默认为\ /env/php/：
+    read loc
+    if [ ! $loc ] ; then
+        loc=/env/php/
+    fi
+fi
+
+../build/shell/checkandsave $loc php
