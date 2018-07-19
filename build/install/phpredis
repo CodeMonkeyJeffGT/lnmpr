@@ -1,9 +1,10 @@
 #!/bin/bash
 
 cd `dirname $0`
-cd ../../phpredis
 
-echo 进入`pwd`
+../shell/pkgexist phpredis
+
+cd ../../phpredis
 echo 安装\ phpredis
 
 if [ $1 ] ; then

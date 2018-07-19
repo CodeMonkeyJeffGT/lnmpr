@@ -5,12 +5,6 @@ cd `dirname $0`
 echo 进入`pwd`
 echo -n 请指定安装路径，默认为\ /env：
 read base
-function pkgExist ()
-{
-    if [ ! -d $1/ ] ; then
-        build/shell/unpack $1
-    fi
-}
 
 function checkInstall ()
 {
@@ -18,12 +12,6 @@ function checkInstall ()
         exit 1
     fi
 }
-
-# 检查环境
-pkgExist nginx
-pkgExist php
-pkgExist redis
-pkgExist phpredis
 
 echo 开始安装
 

@@ -7,7 +7,8 @@ if [ -d ../data/redis ] ; then
     exit 1
 fi
 
-echo 进入`pwd`
+../shell/pkgexist redis
+
 cd ../../redis
 echo 安装\ redis
 
