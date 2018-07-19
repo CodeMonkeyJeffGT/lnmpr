@@ -3,7 +3,7 @@
 cd `dirname $0`
 
 ../shell/checkinstalled nginx
-if [ -d ../data/nginx ] ; then
+if [ -f ../data/nginx ] ; then
     exit 1
 fi
 

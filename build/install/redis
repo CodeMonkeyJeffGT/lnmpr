@@ -3,7 +3,7 @@
 cd `dirname $0`
 
 ../shell/checkinstalled redis
-if [ -d ../data/redis ] ; then
+if [ -f ../data/redis ] ; then
     exit 1
 fi
 
