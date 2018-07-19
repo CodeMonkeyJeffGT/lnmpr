@@ -2,6 +2,6 @@
 
 cd `dirname $0`
 
-if [ ! -d $1/ ] ; then
+if [ ! -d ../../$1/ ] ; then
     ./unpack $1
 fi
