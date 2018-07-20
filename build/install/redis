@@ -12,14 +12,5 @@ fi
 cd ../../redis
 echo 安装\ redis
 
-if [ $1 ] ; then
-    loc=$1
-else
-    echo -n 请输入安装路径，默认为\ /env/redis/：
-    read loc
-    if [ ! $loc ] ; then
-        loc=/env/redis/
-    fi
-fi
-
-../build/shell/checkandsave $loc redis
+make
+make install

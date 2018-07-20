@@ -17,3 +17,10 @@ else
     fi
 fi
 
+yum -y install autoconf
+
+$phploc/bin/phpize
+./configure --with-php-config=$phploc/bin/php-config
+
+make
+make install
