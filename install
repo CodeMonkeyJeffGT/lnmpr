@@ -31,5 +31,7 @@ build/install/redis $base/redis
 
 build/install/phpredis $base/php
 
+build/install/composer
+
 echo 安装完成
 build/shell/cleanpkg
