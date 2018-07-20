@@ -25,7 +25,6 @@ checkInstall $base nginx
 build/install/php $base/php
 checkInstall $base php
 build/install/redis $base/redis
-checkInstall $base redis
 build/install/phpredis $base/php
 
 echo 安装完成
