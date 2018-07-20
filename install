@@ -20,11 +20,15 @@ if [ ! $base ] ; then
 fi
 sudo mkdir -p $base
 
+#安装
 build/install/nginx $base/nginx
 checkInstall $base nginx
+
 build/install/php $base/php
 checkInstall $base php
+
 build/install/redis $base/redis
+
 build/install/phpredis $base/php
 
 echo 安装完成
